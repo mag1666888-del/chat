@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openimsdk/chat/pkg/common/constant"
-	"github.com/openimsdk/chat/pkg/common/mctx"
-	"github.com/openimsdk/chat/pkg/common/rtc"
-	"github.com/openimsdk/chat/pkg/protocol/admin"
-	"github.com/openimsdk/chat/pkg/protocol/chat"
+	"github.com/mag1666888-del/chat/pkg/common/constant"
+	"github.com/mag1666888-del/chat/pkg/common/mctx"
+	"github.com/mag1666888-del/chat/pkg/common/rtc"
+	"github.com/mag1666888-del/chat/pkg/protocol/admin"
+	"github.com/mag1666888-del/chat/pkg/protocol/chat"
 	"github.com/openimsdk/tools/db/mongoutil"
 	"github.com/openimsdk/tools/discovery"
 	"github.com/openimsdk/tools/errs"
@@ -17,11 +17,11 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/openimsdk/chat/pkg/common/config"
-	"github.com/openimsdk/chat/pkg/common/db/database"
-	"github.com/openimsdk/chat/pkg/email"
-	chatClient "github.com/openimsdk/chat/pkg/rpclient/chat"
-	"github.com/openimsdk/chat/pkg/sms"
+	"github.com/mag1666888-del/chat/pkg/common/config"
+	"github.com/mag1666888-del/chat/pkg/common/db/database"
+	"github.com/mag1666888-del/chat/pkg/email"
+	chatClient "github.com/mag1666888-del/chat/pkg/rpclient/chat"
+	"github.com/mag1666888-del/chat/pkg/sms"
 )
 
 type Config struct {

@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM open source community. All rights reserved.
+// Copyright © 2024 my-open-im open source community. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,8 +23,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/openimsdk/chat/pkg/common/constant"
-	"github.com/openimsdk/chat/pkg/common/db/table/admin"
+	"github.com/mag1666888-del/chat/pkg/common/constant"
+	"github.com/mag1666888-del/chat/pkg/common/db/table/admin"
 	"github.com/openimsdk/tools/errs"
 )
 

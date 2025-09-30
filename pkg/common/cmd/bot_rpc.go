@@ -3,9 +3,9 @@ package cmd
 import (
 	"context"
 
-	"github.com/openimsdk/chat/internal/rpc/bot"
-	"github.com/openimsdk/chat/pkg/common/config"
-	"github.com/openimsdk/chat/pkg/common/startrpc"
+	"github.com/mag1666888-del/chat/internal/rpc/bot"
+	"github.com/mag1666888-del/chat/pkg/common/config"
+	"github.com/mag1666888-del/chat/pkg/common/startrpc"
 	"github.com/openimsdk/tools/system/program"
 	"github.com/spf13/cobra"
 )

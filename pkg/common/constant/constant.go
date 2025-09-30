@@ -1,6 +1,6 @@
 package constant
 
-import "github.com/openimsdk/protocol/constant"
+import "github.com/mag1666888-del/protocol/constant"
 
 const (
 	MountConfigFilePath = "CONFIG_PATH"

@@ -7,9 +7,9 @@
 package admin
 
 import (
-	common "github.com/openimsdk/chat/pkg/protocol/common"
-	sdkws "github.com/openimsdk/protocol/sdkws"
-	wrapperspb "github.com/openimsdk/protocol/wrapperspb"
+	common "github.com/mag1666888-del/chat/pkg/protocol/common"
+	sdkws "github.com/mag1666888-del/protocol/sdkws"
+	wrapperspb "github.com/mag1666888-del/protocol/wrapperspb"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

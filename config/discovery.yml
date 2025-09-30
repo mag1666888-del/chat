@@ -9,6 +9,6 @@ kubernetes:
   namespace: default
 
 rpcService:
-  chat: chat-rpc-service
+  chat: my-chat-rpc-service
   admin: admin-rpc-service
   bot: bot-rpc-service

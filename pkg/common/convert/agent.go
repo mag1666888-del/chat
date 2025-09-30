@@ -3,8 +3,8 @@ package convert
 import (
 	"time"
 
-	"github.com/openimsdk/chat/pkg/common/db/table/bot"
-	pbbot "github.com/openimsdk/chat/pkg/protocol/bot"
+	"github.com/mag1666888-del/chat/pkg/common/db/table/bot"
+	pbbot "github.com/mag1666888-del/chat/pkg/protocol/bot"
 	"github.com/openimsdk/tools/utils/datautil"
 )
 

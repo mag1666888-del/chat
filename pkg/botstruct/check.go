@@ -3,7 +3,7 @@ package botstruct
 import (
 	"strings"
 
-	"github.com/openimsdk/chat/pkg/common/constant"
+	"github.com/mag1666888-del/chat/pkg/common/constant"
 )
 
 func IsAgentUserID(userID string) bool {

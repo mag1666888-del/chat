@@ -2,7 +2,7 @@ package chat
 
 import (
 	"context"
-	"github.com/openimsdk/chat/pkg/protocol/chat"
+	"github.com/mag1666888-del/chat/pkg/protocol/chat"
 )
 
 func (o *chatSvr) SetAllowRegister(ctx context.Context, req *chat.SetAllowRegisterReq) (*chat.SetAllowRegisterResp, error) {

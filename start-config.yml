@@ -1,6 +1,6 @@
 serviceBinaries:
-  chat-api: 1
-  chat-rpc: 1
+  my-chat-api: 1
+  my-chat-rpc: 1
   admin-api: 1
   admin-rpc: 1
   bot-api: 1

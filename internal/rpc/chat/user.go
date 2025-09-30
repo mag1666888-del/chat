@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM open source community. All rights reserved.
+// Copyright © 2024 my-open-im open source community. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,23 +17,23 @@ package chat
 import (
 	"context"
 	"errors"
-	"github.com/openimsdk/chat/pkg/eerrs"
-	"github.com/openimsdk/protocol/wrapperspb"
+	"github.com/mag1666888-del/chat/pkg/eerrs"
+	"github.com/mag1666888-del/protocol/wrapperspb"
 	"github.com/openimsdk/tools/utils/stringutil"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/openimsdk/chat/pkg/common/db/dbutil"
-	chatdb "github.com/openimsdk/chat/pkg/common/db/table/chat"
-	constantpb "github.com/openimsdk/protocol/constant"
+	"github.com/mag1666888-del/chat/pkg/common/db/dbutil"
+	chatdb "github.com/mag1666888-del/chat/pkg/common/db/table/chat"
+	constantpb "github.com/mag1666888-del/protocol/constant"
 	"github.com/openimsdk/tools/log"
 	"github.com/openimsdk/tools/mcontext"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/openimsdk/chat/pkg/common/constant"
-	"github.com/openimsdk/chat/pkg/common/mctx"
-	"github.com/openimsdk/chat/pkg/protocol/chat"
+	"github.com/mag1666888-del/chat/pkg/common/constant"
+	"github.com/mag1666888-del/chat/pkg/common/mctx"
+	"github.com/mag1666888-del/chat/pkg/protocol/chat"
 	"github.com/openimsdk/tools/errs"
 )
 

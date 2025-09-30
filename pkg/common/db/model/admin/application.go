@@ -2,8 +2,8 @@ package admin
 
 import (
 	"context"
-	"github.com/openimsdk/chat/pkg/common/db/table/admin"
-	admindb "github.com/openimsdk/chat/pkg/common/db/table/admin"
+	"github.com/mag1666888-del/chat/pkg/common/db/table/admin"
+	admindb "github.com/mag1666888-del/chat/pkg/common/db/table/admin"
 	"github.com/openimsdk/tools/db/mongoutil"
 	"github.com/openimsdk/tools/db/pagination"
 	"go.mongodb.org/mongo-driver/bson"

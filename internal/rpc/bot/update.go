@@ -1,6 +1,6 @@
 package bot
 
-import "github.com/openimsdk/chat/pkg/protocol/bot"
+import "github.com/mag1666888-del/chat/pkg/protocol/bot"
 
 func ToDBAgentUpdate(req *bot.UpdateAgentReq) map[string]any {
 	update := make(map[string]any)

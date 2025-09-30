@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM open source community. All rights reserved.
+// Copyright © 2024 my-open-im open source community. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,11 +24,11 @@ import (
 	"github.com/google/uuid"
 	"github.com/openimsdk/tools/errs"
 
-	"github.com/openimsdk/chat/pkg/common/constant"
-	admindb "github.com/openimsdk/chat/pkg/common/db/table/admin"
-	"github.com/openimsdk/chat/pkg/common/mctx"
-	"github.com/openimsdk/chat/pkg/protocol/admin"
-	"github.com/openimsdk/chat/pkg/protocol/common"
+	"github.com/mag1666888-del/chat/pkg/common/constant"
+	admindb "github.com/mag1666888-del/chat/pkg/common/db/table/admin"
+	"github.com/mag1666888-del/chat/pkg/common/mctx"
+	"github.com/mag1666888-del/chat/pkg/protocol/admin"
+	"github.com/mag1666888-del/chat/pkg/protocol/common"
 )
 
 func (o *adminServer) AddApplet(ctx context.Context, req *admin.AddAppletReq) (*admin.AddAppletResp, error) {

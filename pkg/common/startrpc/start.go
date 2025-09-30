@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/openimsdk/chat/pkg/common/config"
-	"github.com/openimsdk/chat/pkg/common/kdisc"
-	disetcd "github.com/openimsdk/chat/pkg/common/kdisc/etcd"
+	"github.com/mag1666888-del/chat/pkg/common/config"
+	"github.com/mag1666888-del/chat/pkg/common/kdisc"
+	disetcd "github.com/mag1666888-del/chat/pkg/common/kdisc/etcd"
 	"github.com/openimsdk/tools/discovery/etcd"
 	"github.com/openimsdk/tools/utils/datautil"
 	"github.com/openimsdk/tools/utils/runtimeenv"

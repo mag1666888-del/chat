@@ -3,8 +3,8 @@ package cmd
 import (
 	"context"
 
-	"github.com/openimsdk/chat/internal/api/admin"
-	"github.com/openimsdk/chat/pkg/common/config"
+	"github.com/mag1666888-del/chat/internal/api/admin"
+	"github.com/mag1666888-del/chat/pkg/common/config"
 	"github.com/openimsdk/tools/system/program"
 	"github.com/spf13/cobra"
 )

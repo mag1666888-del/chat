@@ -1,9 +1,9 @@
-# openim-chat
+# my-open-im-chat
 
 ## 🧩 Feature Overview
 
 1. This repository implements a business system, which consists of two parts: User System and Backend Management System.
-2. The system relies on the [open-im-server repository](https://github.com/openimsdk/open-im-server) and implements various business functions by calling the APIs of the instant messaging system.
+2. The system relies on the [my-open-im-server repository](https://github.com/mag1666888-del/my-open-im-server) and implements various business functions by calling the APIs of the instant messaging system.
 3. The User System includes regular functions such as user login, user registration, user information update, etc.
 4. The Backend Management System includes APIs for managing users, groups, and messages.
 
@@ -20,7 +20,7 @@
 ### 📦 Clone
 
 ```bash
-git clone https://github.com/openimsdk/chat openim-chat
+git clone https://github.com/mag1666888-del/chat openim-chat
 cd openim-chat
 ```
 
@@ -70,7 +70,7 @@ mage stop
 
 ### 🚀 Start Sequence
 
-1. Successfully start [open-im-server](https://github.com/openimsdk/open-im-server).
+1. Successfully start [open-im-server](https://github.com/mag1666888-del/my-open-im-server).
 2. Compile chat `mage`.
 3. Start chat `mage start`.
 

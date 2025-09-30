@@ -8,18 +8,18 @@ import (
 	"strings"
 	"time"
 
-	constantpb "github.com/openimsdk/protocol/constant"
+	constantpb "github.com/mag1666888-del/protocol/constant"
 	"github.com/openimsdk/tools/utils/datautil"
 
 	"github.com/openimsdk/tools/errs"
 	"github.com/openimsdk/tools/log"
 	"github.com/openimsdk/tools/mcontext"
 
-	"github.com/openimsdk/chat/pkg/common/constant"
-	"github.com/openimsdk/chat/pkg/common/db/dbutil"
-	chatdb "github.com/openimsdk/chat/pkg/common/db/table/chat"
-	"github.com/openimsdk/chat/pkg/eerrs"
-	"github.com/openimsdk/chat/pkg/protocol/chat"
+	"github.com/mag1666888-del/chat/pkg/common/constant"
+	"github.com/mag1666888-del/chat/pkg/common/db/dbutil"
+	chatdb "github.com/mag1666888-del/chat/pkg/common/db/table/chat"
+	"github.com/mag1666888-del/chat/pkg/eerrs"
+	"github.com/mag1666888-del/chat/pkg/protocol/chat"
 )
 
 type verifyType int

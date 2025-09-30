@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/openimsdk/chat/pkg/botstruct"
-	"github.com/openimsdk/chat/pkg/common/imapi"
-	"github.com/openimsdk/chat/pkg/common/mctx"
-	"github.com/openimsdk/chat/pkg/protocol/bot"
-	"github.com/openimsdk/protocol/constant"
+	"github.com/mag1666888-del/chat/pkg/botstruct"
+	"github.com/mag1666888-del/chat/pkg/common/imapi"
+	"github.com/mag1666888-del/chat/pkg/common/mctx"
+	"github.com/mag1666888-del/chat/pkg/protocol/bot"
+	"github.com/mag1666888-del/protocol/constant"
 	"github.com/openimsdk/tools/errs"
 	"github.com/sashabaranov/go-openai"
 )

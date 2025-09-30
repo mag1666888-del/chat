@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: openim-chat-config
+  name: openim-my-chat-config
 data:
   discovery.yml: |
     enable: kubernetes
@@ -14,7 +14,7 @@ data:
       password: ''
 
     rpcService:
-      chat: chat-rpc-service
+      chat: my-chat-rpc-service
       admin: admin-rpc-service
 
   log.yml: |
@@ -81,14 +81,14 @@ data:
        # Default username and password for the admin
       - "chatAdmin"
 
-  chat-api-admin.yml: |
+  my-chat-api-admin.yml: |
     api:
       # Listening IP; 0.0.0.0 means both internal and external IPs are listened to, default is recommended
       listenIP: 0.0.0.0
       # Listening ports; if multiple are configured, multiple instances will be launched
       ports: [ 10009 ]
 
-  chat-rpc-admin.yml: |
+  my-chat-rpc-admin.yml: |
     rpc:
       # The IP address where this RPC service registers itself; if left blank, it defaults to the internal network IP
       registerIP: ''
@@ -101,14 +101,14 @@ data:
       expire: 90
 
     secret: chat123
-  chat-api-chat.yml: |
+  my-chat-api-chat.yml: |
     api:
       # Listening IP; 0.0.0.0 means both internal and external IPs are listened to, default is recommended
       listenIP: 0.0.0.0
       # Listening ports; if multiple are configured, multiple instances will be launched
       ports: [ 10008 ]
 
-  chat-rpc-chat.yml: |
+  my-chat-rpc-chat.yml: |
     rpc:
       # The IP address where this RPC service registers itself; if left blank, it defaults to the internal network IP
       registerIP: ''

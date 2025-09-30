@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM open source community. All rights reserved.
+// Copyright © 2024 my-open-im open source community. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,15 +19,15 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"time"
 
-	"github.com/openimsdk/chat/pkg/common/db/cache"
-	"github.com/openimsdk/protocol/constant"
+	"github.com/mag1666888-del/chat/pkg/common/db/cache"
+	"github.com/mag1666888-del/protocol/constant"
 	"github.com/openimsdk/tools/db/mongoutil"
 	"github.com/openimsdk/tools/db/pagination"
 	"github.com/openimsdk/tools/db/tx"
 	"github.com/redis/go-redis/v9"
 
-	"github.com/openimsdk/chat/pkg/common/db/model/admin"
-	admindb "github.com/openimsdk/chat/pkg/common/db/table/admin"
+	"github.com/mag1666888-del/chat/pkg/common/db/model/admin"
+	admindb "github.com/mag1666888-del/chat/pkg/common/db/table/admin"
 )
 
 type AdminDatabaseInterface interface {

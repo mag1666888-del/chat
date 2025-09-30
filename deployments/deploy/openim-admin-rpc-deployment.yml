@@ -35,12 +35,12 @@ spec:
                   key: mongo_openim_password
 
           volumeMounts:
-            - name: openim-chat-config
+            - name: openim-my-chat-config
               mountPath: "/config"
               readOnly: true
           ports:
             - containerPort: 30200
       volumes:
-        - name: openim-chat-config
+        - name: openim-my-chat-config
           configMap:
-            name: openim-chat-config
+            name: openim-my-chat-config

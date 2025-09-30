@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM open source community. All rights reserved.
+// Copyright © 2024 my-open-im open source community. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@ import (
 	"io"
 	"time"
 
-	"github.com/openimsdk/chat/internal/api/util"
+	"github.com/mag1666888-del/chat/internal/api/util"
 
 	"github.com/gin-gonic/gin"
-	"github.com/openimsdk/chat/pkg/common/apistruct"
-	"github.com/openimsdk/chat/pkg/common/imapi"
-	"github.com/openimsdk/chat/pkg/common/mctx"
-	"github.com/openimsdk/chat/pkg/protocol/admin"
-	chatpb "github.com/openimsdk/chat/pkg/protocol/chat"
-	constantpb "github.com/openimsdk/protocol/constant"
-	"github.com/openimsdk/protocol/sdkws"
+	"github.com/mag1666888-del/chat/pkg/common/apistruct"
+	"github.com/mag1666888-del/chat/pkg/common/imapi"
+	"github.com/mag1666888-del/chat/pkg/common/mctx"
+	"github.com/mag1666888-del/chat/pkg/protocol/admin"
+	chatpb "github.com/mag1666888-del/chat/pkg/protocol/chat"
+	constantpb "github.com/mag1666888-del/protocol/constant"
+	"github.com/mag1666888-del/protocol/sdkws"
 	"github.com/openimsdk/tools/a2r"
 	"github.com/openimsdk/tools/apiresp"
 	"github.com/openimsdk/tools/errs"

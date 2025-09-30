@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM open source community. All rights reserved.
+// Copyright © 2024 my-open-im open source community. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,10 +15,10 @@
 package imapi
 
 import (
-	"github.com/openimsdk/protocol/auth"
-	"github.com/openimsdk/protocol/group"
-	"github.com/openimsdk/protocol/relation"
-	"github.com/openimsdk/protocol/user"
+	"github.com/mag1666888-del/protocol/auth"
+	"github.com/mag1666888-del/protocol/group"
+	"github.com/mag1666888-del/protocol/relation"
+	"github.com/mag1666888-del/protocol/user"
 )
 
 // im caller.

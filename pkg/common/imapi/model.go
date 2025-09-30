@@ -1,6 +1,6 @@
 package imapi
 
-import "github.com/openimsdk/protocol/sdkws"
+import "github.com/mag1666888-del/protocol/sdkws"
 
 // SendSingleMsgReq defines the structure for sending a message to multiple recipients.
 type SendSingleMsgReq struct {

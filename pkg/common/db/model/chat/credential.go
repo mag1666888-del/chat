@@ -2,7 +2,7 @@ package chat
 
 import (
 	"context"
-	"github.com/openimsdk/chat/pkg/common/db/table/chat"
+	"github.com/mag1666888-del/chat/pkg/common/db/table/chat"
 	"github.com/openimsdk/tools/db/mongoutil"
 	"github.com/openimsdk/tools/db/pagination"
 	"github.com/openimsdk/tools/errs"
