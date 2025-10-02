@@ -20,4 +20,4 @@ COPY --from=builder /out/chat-api /app/chat-api
 COPY --from=builder /app/config /app/config
 COPY --from=builder /app/start-config.yml /app/start-config.yml
 EXPOSE 8080
-ENTRYPOINT ["/app/chat-api"]
+ENTRYPOINT ["/app/chat-api", "-c", "/app/config"]
