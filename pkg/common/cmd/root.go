@@ -100,7 +100,10 @@ func (r *RootCmd) initEtcd() error {
 	}
 	if disConfig.Enable == kdisc.ETCDCONST {
 		discov, _ := kdisc.NewDiscoveryRegister(&disConfig, env, nil)
-		r.etcdClient = discov.(*etcd.SvcDiscoveryRegistryImpl).GetClient()
+		// 安全类型断言：仅当为 etcd 实现时才获取客户端，避免在 K8s 模式下崩溃
+		if etcdDiscov, ok := discov.(*etcd.SvcDiscoveryRegistryImpl); ok {
+			r.etcdClient = etcdDiscov.GetClient()
+		}
 	}
 	return nil
 }
@@ -119,8 +122,10 @@ func (r *RootCmd) persistentPreRun(cmd *cobra.Command, opts ...func(*CmdOpts)) e
 	if err := r.initializeLogger(cmdOpts); err != nil {
 		return errs.WrapMsg(err, "failed to initialize logger")
 	}
-	if err := r.etcdClient.Close(); err != nil {
-		return errs.WrapMsg(err, "failed to close etcd client")
+	if r.etcdClient != nil {
+		if err := r.etcdClient.Close(); err != nil {
+			return errs.WrapMsg(err, "failed to close etcd client")
+		}
 	}
 
 	return nil
