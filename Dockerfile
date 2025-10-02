@@ -10,7 +10,18 @@ WORKDIR $SERVER_DIR
 # Set the Go proxy to improve dependency resolution speed
 # ENV GOPROXY=https://goproxy.io,direct
 
+# Configure Go environment for private repositories
+ENV GONOPROXY=github.com/mag1666888-del/*
+ENV GONOSUMDB=github.com/mag1666888-del/*
+ENV GOPRIVATE=github.com/mag1666888-del/*
+
 COPY go.mod go.sum ./
+
+# Configure Git for private repositories
+RUN git config --global url."https://github.com/mag1666888-del/".insteadOf "git@github.com:mag1666888-del/"
+
+# Clone the protocol dependency from Git
+RUN git clone https://github.com/mag1666888-del/protocol.git /protocol
 
 RUN go mod download
 
