@@ -15,6 +15,9 @@ ENV GONOPROXY=github.com/mag1666888-del/*
 ENV GONOSUMDB=github.com/mag1666888-del/*
 ENV GOPRIVATE=github.com/mag1666888-del/*
 
+# Install Git for cloning private repositories
+RUN apk add --no-cache git
+
 COPY go.mod go.sum ./
 
 # Configure Git for private repositories
