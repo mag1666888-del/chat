@@ -19,8 +19,8 @@ FROM alpine:3.19
 RUN apk add --no-cache ca-certificates tzdata
 WORKDIR /app
 ARG BIN_NAME=chat-api
-COPY --from=builder /out/${BIN_NAME} /app/${BIN_NAME}
+COPY --from=builder /out/${BIN_NAME} /app/app
 COPY --from=builder /app/config /config
 COPY --from=builder /app/start-config.yml /config/start-config.yml
 EXPOSE 8080
-ENTRYPOINT ["/app/${BIN_NAME}", "-c", "/config"]
+ENTRYPOINT ["/app/app", "-c", "/config"]
