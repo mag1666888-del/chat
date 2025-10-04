@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-chat-rpc-service
+  name: chat-rpc-service
 spec:
   selector:
-    app: my-chat-rpc-server
+    app: chat-rpc-server
   ports:
     - name: rpc-30300
       protocol: TCP

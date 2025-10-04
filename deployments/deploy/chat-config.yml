@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: openim-my-chat-config
+  name: openim-chat-config
 data:
   discovery.yml: |
     enable: kubernetes
@@ -14,7 +14,16 @@ data:
       password: ''
 
     rpcService:
-      chat: my-chat-rpc-service
+      user: user-rpc-service
+      friend: friend-rpc-service
+      msg: msg-rpc-service
+      push: push-rpc-service
+      messageGateway: messagegateway-rpc-service
+      group: group-rpc-service
+      auth: auth-rpc-service
+      conversation: conversation-rpc-service
+      third: third-rpc-service
+      chat: chat-rpc-service
       admin: admin-rpc-service
 
   log.yml: |
@@ -35,38 +44,24 @@ data:
     isSimplify: true
 
   mongodb.yml: |
-    # URI for database connection, leave empty if using address and credential settings directly
-    uri: ''
-    # List of MongoDB server addresses
-    address: [ mongo-service:37017 ]
-    # Name of the database
+    uri: "mongodb://minio_pC5wMB:rI57PJsJhnz_qlRkfnTa0RPT@47.237.103.4:27017/openim_v3?authSource=admin&directConnection=true"
+    address: []
     database: openim_v3
-    # Username for database authentication
-    username: openIM
-    # Password for database authentication
-    password: # openIM123
-    # Authentication source for database authentication, if use root user, set it to admin
-    authSource: openim_v3
-    # Maximum number of connections in the connection pool
+    username:
+    password:
+    authSource:
+    mongoMode: "standalone"
     maxPoolSize: 100
-    # Maximum number of retry attempts for a failed database connection
     maxRetry: 10
 
   redis.yml: |
-    # List of Redis server addresses
-    address: [ redis-service:16379 ]
-    # Username for Redis authentication (leave blank if not used)
-    username: ''
-    # Password for Redis authentication
-    password:   # openIM123
-    # Enable or disable pipeline processing
-    enablePipeline: false
-    # Enable or disable cluster mode
+    address: [ "47.237.103.4:6379" ]
+    username:
+    password: 'rI57PJsJhnz_qlRkfnTa0RPT'  # openIM123
     clusterMode: false
-    # Database index to be used
     db: 0
-    # Maximum number of retry attempts for a failed connection
     maxRetry: 10
+    poolSize: 100
 
   share.yml: |
     openIM:
@@ -81,14 +76,14 @@ data:
        # Default username and password for the admin
       - "chatAdmin"
 
-  my-chat-api-admin.yml: |
+  chat-api-admin.yml: |
     api:
       # Listening IP; 0.0.0.0 means both internal and external IPs are listened to, default is recommended
       listenIP: 0.0.0.0
       # Listening ports; if multiple are configured, multiple instances will be launched
       ports: [ 10009 ]
 
-  my-chat-rpc-admin.yml: |
+  chat-rpc-admin.yml: |
     rpc:
       # The IP address where this RPC service registers itself; if left blank, it defaults to the internal network IP
       registerIP: ''
@@ -101,14 +96,14 @@ data:
       expire: 90
 
     secret: chat123
-  my-chat-api-chat.yml: |
+  chat-api-chat.yml: |
     api:
       # Listening IP; 0.0.0.0 means both internal and external IPs are listened to, default is recommended
       listenIP: 0.0.0.0
       # Listening ports; if multiple are configured, multiple instances will be launched
       ports: [ 10008 ]
 
-  my-chat-rpc-chat.yml: |
+  chat-rpc-chat.yml: |
     rpc:
       # The IP address where this RPC service registers itself; if left blank, it defaults to the internal network IP
       registerIP: ''

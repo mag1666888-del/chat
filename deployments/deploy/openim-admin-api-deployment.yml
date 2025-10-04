@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
         - name: openim-admin-api-container
-          image: openim/openim-admin-api:v3.8.3
+          image: mag1666888/openim-admin-api:dev
           env:
             - name: CONFIG_PATH
               value: "/config"
             - name: CHATENV_REDIS_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: redis-secret
+                  name: openim-redis-secret
                   key: redis-password
             - name: IMENV_MONGODB_USERNAME
               valueFrom:
@@ -31,16 +31,16 @@ spec:
             - name: CHATENV_MONGODB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mongo-secret
+                  name: openim-mongo-secret
                   key: mongo_openim_password
 
           volumeMounts:
-            - name: openim-my-chat-config
+            - name: openim-chat-config
               mountPath: "/config"
               readOnly: true
           ports:
             - containerPort: 10009
       volumes:
-        - name: openim-my-chat-config
+        - name: openim-chat-config
           configMap:
-            name: openim-my-chat-config
+            name: openim-chat-config

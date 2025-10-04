@@ -1,0 +1,118 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: livekit-server
+  labels:
+    app: livekit-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: livekit-server
+  template:
+    metadata:
+      labels:
+        app: livekit-server
+    spec:
+      containers:
+      - name: livekit-server
+        image: livekit/livekit-server:latest
+        ports:
+        - containerPort: 7880
+          name: http
+        - containerPort: 7881
+          name: websocket
+        - containerPort: 7882
+          name: udp
+          protocol: UDP
+        - containerPort: 50000
+          name: rtc-start
+        - containerPort: 60000
+          name: rtc-end
+        args:
+        - --config
+        - /livekit.yaml
+        - --bind
+        - 0.0.0.0
+        - --node-ip
+        - 47.237.103.4  # 替换为你的服务器IP
+        volumeMounts:
+        - name: livekit-config
+          mountPath: /livekit.yaml
+          subPath: livekit.yaml
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+      volumes:
+      - name: livekit-config
+        configMap:
+          name: livekit-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: livekit-service
+  labels:
+    app: livekit-server
+spec:
+  selector:
+    app: livekit-server
+  ports:
+  - name: http
+    port: 7880
+    targetPort: 7880
+    protocol: TCP
+  - name: websocket
+    port: 7881
+    targetPort: 7881
+    protocol: TCP
+  - name: udp
+    port: 7882
+    targetPort: 7882
+    protocol: UDP
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: livekit-public
+  labels:
+    app: livekit-server
+    service-type: public
+spec:
+  selector:
+    app: livekit-server
+  ports:
+  - name: http
+    port: 7880
+    targetPort: 7880
+    protocol: TCP
+  - name: websocket
+    port: 7881
+    targetPort: 7881
+    protocol: TCP
+  - name: udp
+    port: 7882
+    targetPort: 7882
+    protocol: UDP
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: livekit-config
+data:
+  livekit.yaml: |
+    port: 7880
+    rtc:
+        tcp_port: 7881
+        port_range_start: 50000
+        port_range_end: 60000
+        use_external_ip: false
+        enable_loopback_candidate: false
+    keys:
+        APIGPW3gnFTzqHH: 23ztfSqsfQ8hKkHzHTl3Z4bvaxro0snjk5jwbp5p6Q3
